@@ -188,7 +188,7 @@ let respecConfig = {
             date: "2024"
         },
       "VanBerlo2026": {
-            href: "https://www.researchgate.net/publication/408634536_PROPOSAL_FOR_A_MODERN_FOUNDATION_FOR_A_DATA-DRIVEN_BUILT_ENVIRONMENT",
+            href: "https://doi.org/10.35490/EC3.2026.340",
             title: "Proposal for a modern foundation for a data-driven built environment",
             authors: ["Léon van Berlo, Thomas Krijnen, Tom van Diggelen, Artur Tomczak, Evandro Alfieri, David de Koning, Greg Schleusner, Helga Tauscher, Dennis Shelden"],
             date: "2026"
