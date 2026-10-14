@@ -7,7 +7,7 @@ Een fundamenteel verschil is het gebruik van een lokaal coördinatenstelsel in B
 
 Het Geo- en BIM-domein kunnen dichter bij elkaar worden gebracht door BIM-modellen letterlijk goed op de kaart te zetten. Dit kan men doen door een BIM-model te georefereren. Georefereren maakt het mogelijk dat BIM- en Geo-data samen worden weergegeven en ruimtelijk ten opzichte van elkaar kunnen worden geanalyseerd en bevraagd.
 
-De voorliggende praktijkrichtlijn is bedoeld voor Geo- en BIM-modelleurs van infra en utuliteitsbouw. De richtlijn voorziet in werkwijzen en oplossingen die nodig zijn om Geo-data en BIM te georefereren. Het biedt een Informatie Levering Handleiding gebaseerd op open standaard uitwisseling. 
+De voorliggende praktijkrichtlijn is bedoeld voor Geo- en BIM-modelleurs van infra en utiliteitsbouw. De richtlijn voorziet in werkwijzen en oplossingen die nodig zijn om Geo-data en BIM te georefereren. Het biedt een Informatie Levering Handleiding gebaseerd op open standaard uitwisseling. 
 
 # Leeswijzer
 Deze praktijkrichtlijn is als volgt opgebouwd: 
