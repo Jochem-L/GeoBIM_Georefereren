@@ -75,8 +75,8 @@ GNSS staat voor Global Navigation Satellite System. Het is de verzamelnaam voor 
 NSGI staat voor Nederlandse Samenwerking Geodetische Infrastructuur. Het is een samenwerkingsverband tussen het Kadaster, Rijkswaterstaat en de Dienst der Hydrografie van de Koninklijke Marine. Samen zorgen zij voor het opzetten, onderhouden en beschikbaar stellen van de geodetische infrastructuur van Nederland. DE NSGI heeft een online tool voor het omrekenen van coördinaten van ETRS89 naar RD. 
 [Online coördinatentransformatie](https://www.nsgi.nl/coordinatenstelsels-en-transformaties/tools/online-coordinatentransformatie) <br>
 <br>
-**<dfn>BIM nulpunt</dfn>** <br>
-Referentiepunt voor het uitwisselen van BIM-modellen zonder georeferentie. Een Bim-nulpunt staat op een vaste afstand (meestal 5 of 10 meter) ten opzichte van de eerste gridlijnen van een BIM-model. De geografisch positie van dit punt worden als eigenschappen toegekend (x,y in RD en hoogte ten opzichte van NAP). Daarnaast geeft het object informatie over de rotatie van het <a>lokaal CRS</a> ten opzicht van <a>Grid North</a> (kaartnoorden).<br>
+**<dfn>BIM-nulpunt</dfn>** <br>
+Referentiepunt voor het uitwisselen en kunnen combineren/over elkaar heen leggen van BIM-aspectmodellen. De geo-referentie van het nulpunt kan als eigenschap aan het model worden meegegeven, zodat het eventueel in GIS viewers op de juiste plek in de wereld kan worden weergegeven. Een Bim-nulpunt staat op een vaste afstand (meestal 5 of 10 meter) ten opzichte van de eerste gridlijnen van een BIM-model. De geografisch positie van dit punt worden als eigenschappen toegekend. Daarnaast geeft het object informatie over de rotatie van het <a>lokaal CRS</a> ten opzicht van <a>Grid North</a> (kaartnoorden).<br>
 <br>
 **<dfn>Project Basepoint</dfn>** <br>
 Het Project Base Point in Revit is de oorsprong van je projectcoördinaten, waarmee je afstanden en posities binnen het model bepaalt. Het verschilt van het Survey Point, dat juist een koppeling legt met de echte wereld. Samen zorgen deze punten voor een correcte uitlijning en coördinatie in Revit.<br>
@@ -131,12 +131,16 @@ Het <a>Magnetic North</a>, magnetisch noorden is het punt op aarde waar het aard
 **<dfn>Nulpunt</dfn> (definities)** <br>
 Het begrip “<a>Nulpunt</a>” is meervoudig interpreteerbaar en dient zoveel mogelijk vermeden te worden in de communicatie tussen GIS en BIM. In de praktijk kan een nulpunt namelijk veel betekenissen hebben:<br>
 - De oorsprong in modelleersoftware (<a>internal origin</a>).<br>
-- Referentiepunt voor uitwisseling van BIM-modellen (project base point, BIM nulpunt).<br>
-- Referentiepunt voor het RD-stelsel in het BIM-model (survey point in Revit).<br>
-- Referentiepunt in RD NAP voor een perceel of site (Geo-nulpunt).<br>
+- Referentiepunt bedoeld voor uitwisseling van BIM-modellen (project base point, BIM-nulpunt).<br>
+- Referentiepunt bedoeld voor uitwisseling met Geo RD-stelsel in het BIM-model (survey point in Revit/ArchiCAD is een GEO Coördinatiepunt).<br>
+- Referentiepunt (lokaal nulpunt) uit de BIM basis Infra is een punt om te registrereren hoe objecten ten opzichte van het coördinatenstelsel zijn vastgelegd. 
+- Referentiepunt voor geodata in het model voor een perceel of site (GEO Coördinatiepunt).<br>
 - De referentiekubus zelf die op het nulpunt staat.<br>
-- De oorsprong van het RD-stelsel (in Amersfoort).<br>
-- De oorsprong van het RD-stelsel na translatie (Parijs).<br>
+- De oorsprong van een CRS, bijvoorbeeld het RD-stelsel in Amersfoort (natural origin).<br>
+- De oorsprong van een CRS, bijvoorbeeld RD-stelsel na translatie nabij Parijs (false origin (false easting, false northing)).<br>
+
+In een goed gegeorefereerd project vallen GEO Coördinatiepunt en survey point samen. Het verschil in begrip is dat het een vanuit Geo en het ander vanuit BIM wordt gezien. En surey point niet in elke software bestaat.
+
 <br>
 <br>
 **<dfn>LoGeoRef</dfn>**
