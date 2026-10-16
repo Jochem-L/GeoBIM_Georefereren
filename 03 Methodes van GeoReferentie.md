@@ -318,14 +318,14 @@ De beschikbaarheid van informatie voor het berekenen van georeferentie-parameter
 <p><strong>AANBEVELING:</strong> Gebruik tooling om modellen die nog niet voldoen aan georeferentie 50, wanneer nodig, te verrijken met georeferentie-informatie conform level 50. </p>
 </aside>
 
-## Schaal en correctie op basis van gebruikte eeenheden
+## Schaal en correctie op basis van gebruikte eenheden
 Geodata of een BIM-model kan in een andere eenheid zijn opgesteld dan het coördinatenstelsel waarnaar het moet worden worden getransformeerd. Het is daarom essentieel om de gebruikte eenheden expliciet te specificeren in het model. Wanneer een source bijvoorbeeld in millimeters is gemodelleerd en de target meters gebruikt, moet er een eenheidsconversie worden toegepast. 
 
 Een mogelijke workaround, wanneer software geen correcte eenheidsconversie uitvoert, is het toepassen van een schaalfactor binnen de georeferentie-informatie, bijvoorbeeld 0.001 voor millimeter naar meter of 0.0254 voor inch naar meter. Het risico van deze aanpak is dat software die de eenheden wél correct interpreteert, deze schaalcorrectie opnieuw toepast, wat leidt tot een dubbele conversie en dus foutieve geometrie.
 
 <figure id="Schaalprobleem_bij_georefereren" style="display: block; text-align: center; margin: 0 auto;">
   <img src="media/Georeferentie Informatie Levels/Schaalfout_bij_Georeferentie.jpg" alt="Schaal en/of eenheden probleem bij georefereren" style="width: 100%; max-width: 500px; height: auto; display: block; margin: 0 auto;">
-  <figcaption><a class="self-link" href="#fig-Schaalprobleem_bij_georefereren"></bdi></a><span class="fig-title">Schaal en/of eenheden probleem bij georefereren</span></figcaption>
+  <figcaption><a class="self-link" href="#fig-Schaalprobleem_bij_georefereren"></bdi></a><span class="fig-title">Schaal- en/of eenhedenprobleem bij georefereren</span></figcaption>
 </figure>
 
 <aside class="note" title="Gebruik van LoGeoRef en schaal"> <p><strong>AANBEVELING:</strong> Gebruik de schaalparameter binnen georeferentie uitsluitend voor geometrische transformaties binnen het coördinatensysteem (bijvoorbeeld CRS-transformaties), en niet voor eenheidsconversies. Definieer eenheden altijd expliciet via de daarvoor bestemde attributen, zoals <a href="https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcUnitAssignment.htm">IfcUnitAssignment</a>.</p> </aside>
