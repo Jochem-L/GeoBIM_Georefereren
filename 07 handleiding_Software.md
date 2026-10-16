@@ -1,8 +1,11 @@
 # Handleiding Software
 
+## GEO Coördinatiepunt en het BIM-nulpunt
+In software maakt men gebruik van een GEO Coördinatiepunt en een BIM nulpunt. Dit is in de praktijk een sterk paar. Samen beschrijven de twee punten exact dezelfde transformatie als IfcMapConversion. In het BIM-model staat het noordgerichte GEO Coördinatiepunt vrijwel altijd verdraaid t.o.v. de projectassen - een project ligt zelden precies op het noorden. Het verschil tussen beide punten laat gebruikers eenvoudig wisselen tussen BIM- en RD-coordinaten. Men gebruikt voor deze punten fysieke objecte. In veel software is IfcMapConversion niet of nauwelijks visueel te controleren. Een fysiek, noordgericht object op het GEO Coördinatiepunt en een object op het BIM nulpunt maken de georeferentie in elke viewer zichtbaar en controleerbaar. 
+
+
 ## Onderlegger 
 Voor het Georefereren van BIM-modellen kan het handig zijn om een onderlegger van de locatie te gebruiken. Dit kan een CAD-bestand zijn. Wanneer men zelf een onderlegger wil maken kan men het volgende doen:
-
 
 ### Onderlegger maken/downloaden
 
@@ -109,7 +112,7 @@ Revit kent <a>Project Units</a>. De project units bevat de instelling van de sta
     <figcaption><a class="self-link" href="#fig-Onderligger-linken-in-Revit"></bdi></a><span class="fig-title">Instellingen bij Link CAD: importeenheid meter, positionering Auto - Center to Center, en Correct lines that are slightly off axis en Orient to View beide uit.</span></figcaption>
 </figure>
 
-De onderlegger kan getekend zijn op RD-coördinaten. Dat betekent vaak dat de geometrie honderden kilometers van het nulpunt van het bestand ligt. Wanneer men kiest voor Auto - Origin to Origin, dan komt de onderlegger op diezelfde afstand van het model terecht. Men loopt dan direct tegen de 20-mijlsgrens van Revit aan. Center to Center plaatst de inhoud van de onderlegger bij je model, waarna deze handmatig op de juiste plek kan worden gelegd.
+De onderlegger kan getekend zijn op RD-coördinaten. Dat betekent vaak dat de geometrie honderden kilometers van het GEO-nulpunt (natural origin) ligt. Wanneer men kiest voor Auto - Origin to Origin, dan komt de onderlegger op diezelfde afstand van het model terecht. Men loopt dan direct tegen de 20-mijlsgrens van Revit aan. Center to Center plaatst de inhoud van de onderlegger bij je model, waarna deze handmatig op de juiste plek kan worden gelegd.
 
 #### Uitlijnen en coördinaten overnemen
 1.	Verplaats en roteer de onderlegger naar een referentie-punt waarvan je de positie zeker weet of naar het model, zodat de onderlegger op de juiste positie staat. Verplaats daarbij niet het getekend model naar de juiste locatie op de onderlegger, maar verplaats de onderlegger naar het model.
@@ -394,7 +397,7 @@ Deze site geeft een actueel kadastrale perceel op NAP hoogte met een <a>GEO Coö
     </figcaption>
 </figure>
 
-Waarden voor de geografische plaatsing van het model <a>nulpunt</a> kun je bekijken en aanpassen onder Project Setup > Geometry > Georeferencing
+Waarden voor de geografische plaatsing van het model <a>BIM nulpunt</a> kun je bekijken en aanpassen onder Project Setup > Geometry > Georeferencing
 Dit zijn exact dezelfde waarden als IFCmapconversion. 
 
 <figure id="Georeferentie_van_IFC_in_Blender" style="display: block; text-align: center; margin: 0 auto;">
@@ -693,7 +696,7 @@ Het is hiermee mogelijk om visueel te controleren hoe het model positioneert ten
 De [IFC2GIS procedure video](https://www.youtube.com/watch?v=pBAhAcyTLSY&t=86s) van Hans Lammerts toont de flow van georeferentie naar QGIS. Zie ook het [BuildingSMART forum](https://forums.buildingsmart.org/t/ifc-to-gis/6115/8) voor een discussie over dit onderwerp. 
 
 **Controle van 3D Georeferentie van een IFC in Solibri:**
-Klik in de Model Tree het model open tot je het IfcProject niveau ziet. Zorg dat je een Ifc4 of hoger model hebt. Klik op het IfcProject (icon lijkt op een papiertje met regels erop). Klik op IFC Coordinates. Lees uit de IfcCoordinateReferenceSystem, IfcMapconversion, IfcProjectedCRS (van het lokale nulpunt).
+Klik in de Model Tree het model open tot je het IfcProject niveau ziet. Zorg dat je een Ifc4 of hoger model hebt. Klik op het IfcProject (icon lijkt op een papiertje met regels erop). Klik op IFC Coordinates. Lees uit de IfcCoordinateReferenceSystem, IfcMapconversion, IfcProjectedCRS (van het lokale BIM nulpunt).
 
 <figure id="Solibri_Georeferentie_controle" style="display: block; text-align: center; margin: 0 auto;">
     <img src="./media/Handleiding/Solibri/GeoReferentieLoGref50-InSolibri.jpg" alt="Solibri_Georeferentie_controle" style="width: 100%; max-width: 600px; height: auto; display: block; margin: 0 auto;"/>
@@ -703,7 +706,7 @@ Klik in de Model Tree het model open tot je het IfcProject niveau ziet. Zorg dat
 </figure>
 
 Het is ook mogelijk om LoGref20 te controleren. In dit geval: 
-Klik in de Model Tree het model open tot je het IfcSite niveau ziet.Dit kan in zowel Ifc2x3, Ifc4 en Ifc4x3 het kan ook soms dubbel zijn met Mapconversion. Klik op het IfcSite object (icon zou een kavel moeten voostellen). Onder in de “Info view” verschijnen tabbladen. Waaronder “Location”. Klik op Location. Lees bij coördinaten>Latitude, Longitude de WGS84 coördinaten uit (van het lokale nulpunt)
+Klik in de Model Tree het model open tot je het IfcSite niveau ziet.Dit kan in zowel Ifc2x3, Ifc4 en Ifc4x3 het kan ook soms dubbel zijn met Mapconversion. Klik op het IfcSite object (icon zou een kavel moeten voostellen). Onder in de “Info view” verschijnen tabbladen. Waaronder “Location”. Klik op Location. Lees bij coördinaten>Latitude, Longitude de WGS84 coördinaten uit (van het lokale BIM nulpunt)
 
 **Controle van 3D Georeferentie van een IFC in BIMCollab:**
 BIMcollab kan worden gebruikt om de georeferentie van een BIM-model te controleren. Hiermee wordt inzicht verkregen in de locatie, oriëntatie en coördinatie van het model.

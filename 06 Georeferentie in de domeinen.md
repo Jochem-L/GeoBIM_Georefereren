@@ -1,7 +1,9 @@
-# Georeferentie in de domeinen B&U en Infra
+# Georeferentie in de domeinen Burgelijke en Utiliteitsbouw (B&U) en Infra
+
+
 
 ## Georeferentie in de B&U
-B&U-projecten kenmerken zich doorgaans door een beperkte ruimtelijke omvang. Modellen worden 
+B&U staat voor Burgerlijke en Utiliteitsbouw,  burgerlijke bouw betreft vooral woningbouw en utiliteitsbouw allerlei gebouwen voor het openbare en zakelijke leven. B&U-projecten kenmerken zich doorgaans door een beperkte ruimtelijke omvang. Modellen worden 
 daarom vaak in een lokaal assenstelsel opgezet. Dit verhoogt de numerieke stabiliteit van 
 berekeningen en voorkomt afrondingsfouten in ontwerpsoftware. Daarnaast vereenvoudigt het 
 de samenwerking tussen disciplines binnen één modelomgeving. Wanneer integratie met 
@@ -22,12 +24,12 @@ Infraprojecten zijn vaak langgerekt en sterk afhankelijk van hun omgeving. De li
 objecten wordt bepaald door bestaande infrastructuur, terreincondities en wettelijke liggingseisen. Hierdoor bestaan veel raakvlakken met de omgeving. Om deze raakvlakken goed te beheersen is een nauwkeurige positionering van zowel het ontwerp als de omgeving essentieel. Over de langere afstanden van infrastructuur projecten zijn de effecten van aardkromming en kaartprojectievervorming vaak niet verwaarloosbaar. Het gebruik van vlakke coördinaten veroorzaakt daardoor in de praktijk ontoelaatbare meetbare geometrische afwijkingen (zie [methode van georeferentie](#Methodes-van-Georeferentie)). In Nederland voorkomt men de afwijkingen doorgaans door te modelleren in RD-coördinaten in combinatie met NAP-hoogten.
 
 **Voorbeelden van infraprojecten**
-- Snelwegen, tunnels en dijkversterkingen (langgerekt)  
+- (Snel)wegen, tunnels en dijkversterkingen (langgerekt)  
 - Bruggen, viaducten en sluizen (locatiegebonden)
 
 Binnen infraprojecten wordt gewerkt met RD-coördinaten ten opzichte van NAP. Dit maakt directe aansluiting op bestaande infrastructuur en GEO mogelijk. Bestaande objecten en terreinpunten worden door landmeters ingemeten met GNSS- of tachymetrische metingen. GNSS-metingen worden daarbij eerst bepaald in een geodetisch referentiestelsel (zoals ETRS89) en vervolgens via officiële transformaties omgerekend naar RD- en NAP-coördinaten. Op basis van deze gegevens wordt het ontwerp opgesteld.
 
-Ook andere geometrische projectinformatie wordt doorgaans in RD aangeleverd. Het RD-stelsel vormt daardoor de logische standaard voor gegevensuitwisseling en ontwerp binnen infraprojecten.
+Ook andere geometrische projectinformatie, zoals bijvoorbeeld riolering, warmtenetten, meubilair, wordt doorgaans in RD aangeleverd. Het RD-stelsel vormt daardoor de logische standaard voor gegevensuitwisseling en ontwerp binnen infraprojecten.
 
 Het ontwerp wordt uitgewerkt in een geprojecteerd coördinatenreferentiesysteem (CRS), waarbij op tekeningen RD-coördinaten en NAP-hoogten worden vermeld om objectlocaties eenduidig vast te leggen. Op de bouwplaats worden ontwerpen uitgezet met meetapparatuur die is georiënteerd op bekende RD-grondslagpunten. Hierdoor kunnen ontwerpcoördinaten rechtstreeks in het veld worden gerealiseerd met de vereiste nauwkeurigheid.
 
