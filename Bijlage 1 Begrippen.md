@@ -139,7 +139,7 @@ Het begrip “<a>Nulpunt</a>” is meervoudig interpreteerbaar en dient zoveel m
 - De oorsprong van een CRS, bijvoorbeeld het RD-stelsel in Amersfoort (natural origin).<br>
 - De oorsprong van een CRS, bijvoorbeeld RD-stelsel na translatie nabij Parijs (false origin (false easting, false northing)).<br>
 
-(In een goed gegeorefereerd project vallen GEO Coördinatiepunt en survey point samen. Het verschil in begrip is dat het een vanuit Geo en het ander vanuit BIM wordt gezien.)
+In een goed gegeorefereerd project vallen GEO Coördinatiepunt en survey point samen. Het verschil in begrip is dat het een vanuit Geo en het ander vanuit BIM wordt gezien. En surey point niet in elke software bestaat.
 
 <br>
 <br>
