@@ -1,6 +1,7 @@
 ## WKT
 
 <aside class="example" title="Voorbeeld 1 van een engineered CRS in WKT">
+
 ```wkt 
 PROJCRS["unknown",  
     BASEGEODCRS["unknown",  
@@ -40,6 +41,7 @@ PROJCRS["unknown",
 </aside>
 
 <aside class="example" title="Voorbeeld 2 van een engineered CRS in WKT">
+    
 ```wkt 
 ENGCRS["Lokaal 3D Stelsel Project ABC",
  EDATUM["Referentiepunt van het gebouw",ANCHOR["Hoek van het kavel"]],
@@ -54,6 +56,7 @@ ENGCRS["Lokaal 3D Stelsel Project ABC",
 
 
 <aside class="example" title="Voorbeeld van een engineered CRS gekoppeld aan RDNAP in WKT">
+
 ```wkt
 BOUNDCRS["EngineeredCRS naar RDNAP",
  SOURCECRS[
