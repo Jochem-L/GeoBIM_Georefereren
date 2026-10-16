@@ -107,7 +107,7 @@ gml:id="localEngineeredCRS3D">
     <gml:usesEngineeringDatum>
         <gml:EngineeringDatum gml:id="localDatum3D">
             <gml:datumName>Local Datum – 3D Map Conversion</gml:datumName>
-            <!-- Ankerpunt en orientatie in EPSG:7415 (X, Y, Z) -->
+            <!-- Ankerpunt en orientatie in EPSG:7415 (x, y, H) -->
             <gml:anchorPoint>
                 <gml:Point gml:id="anchor_7415" srsName="urn:ogc:def:crs:EPSG::7415">
                     <gml:pos>155000.0 463000.0 3.55</gml:pos>
