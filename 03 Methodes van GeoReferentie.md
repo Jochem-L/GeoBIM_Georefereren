@@ -116,7 +116,7 @@ Een andere methode is om een in lokaal cartesisch XYZ gemodelleerd BIM-model met
 
 Zonder schaalcorrectie kunnen afwijkingen optreden zoals beschreven in [Afwijkingen](#afwijkingen). Bij toepassing van een RD-schaalcorrectie voor XY en dezelfde schaalcorrectie voor Z, dan is de afwijking 1 cm bij een model van 500 meter en maximaal 100 meter hoogteverschil (&Delta;H), of 10 cm bij een model van 5 km. Bij toepassing van de RD-schaalcorrectie op XY en niet voor Z, dan is de afwijking vergelijkbaar door vervorming door het RD-correctiegrid en de aardkromming. Voordeel van deze laatste methode is dat deze ook voor modellen met een kleinere lengte (L) en een groter hoogteverschil (&Delta;H) en op zee te gebruiken is, bijvoorbeeld L=200 m en &Delta;H=320 m.
 
-Zonder correctie ontstaat een afwijking van 1 cm bij 100 meter wanneer source en target gecombineerd worden. Bij toepassing van correctie van het totaalmodel met 1 schaal voor xyz, dan is de afwijking 10 mm bij een model van 500 meter en maximaal 100 meter hoogteverschil. Bij toepassing van correctie van het totaalmodel met 2 schalen, 1 xy en 1 voor z, dan is de afwijking 10 mm bij 500 meter en maximaal 128 meter hoogteverschil. Voordeel van deze laatste methode is dat deze ook op zee te gebruiken is.
+Zonder correctie ontstaat een afwijking van 1 cm bij 100 meter wanneer source en target gecombineerd worden. Bij toepassing van correctie van het totaalmodel met 1 schaal voor XYZ, dan is de afwijking 10 mm bij een model van 500 meter en maximaal 100 meter hoogteverschil. Bij toepassing van correctie van het totaalmodel met 2 schalen, 1 XY en 1 voor Z, dan is de afwijking 10 mm bij 500 meter en maximaal 128 meter hoogteverschil. Voordeel van deze laatste methode is dat deze ook op zee te gebruiken is.
 
 ### XYZ gemodelleerd BIM via een 3D gelijkvormigheidstransformatie naar ETRS89 
 Een volgende methode is om een in lokaal cartesisch XYZ gemodelleerd BIM-model met een 3D gelijkvormigheidstransformatie te transformeren naar cartesisch XYZ in het geocentrische ETRS89-coördinatenstelsel. Dit getransformeerde model kan men vervolgens converteren naar breedte, lengte en hoogte in geografisch 3D ETRS89 en transformeren naar RDNAP. 
@@ -318,14 +318,16 @@ De beschikbaarheid van informatie voor het berekenen van georeferentie-parameter
 <p><strong>AANBEVELING:</strong> Gebruik tooling om modellen die nog niet voldoen aan georeferentie 50, wanneer nodig, te verrijken met georeferentie-informatie conform level 50. </p>
 </aside>
 
-## Schaal en correctie op basis van gebruikte eeenheden
+## Schaal en correctie op basis van gebruikte eenheden
 Geodata of een BIM-model kan in een andere eenheid zijn opgesteld dan het coördinatenstelsel waarnaar het moet worden worden getransformeerd. Het is daarom essentieel om de gebruikte eenheden expliciet te specificeren in het model. Wanneer een source bijvoorbeeld in millimeters is gemodelleerd en de target meters gebruikt, moet er een eenheidsconversie worden toegepast. 
 
 Een mogelijke workaround, wanneer software geen correcte eenheidsconversie uitvoert, is het toepassen van een schaalfactor binnen de georeferentie-informatie, bijvoorbeeld 0.001 voor millimeter naar meter of 0.0254 voor inch naar meter. Het risico van deze aanpak is dat software die de eenheden wél correct interpreteert, deze schaalcorrectie opnieuw toepast, wat leidt tot een dubbele conversie en dus foutieve geometrie.
 
 <figure id="Schaalprobleem_bij_georefereren" style="display: block; text-align: center; margin: 0 auto;">
   <img src="media/Georeferentie Informatie Levels/Schaalfout_bij_Georeferentie.jpg" alt="Schaal en/of eenheden probleem bij georefereren" style="width: 100%; max-width: 500px; height: auto; display: block; margin: 0 auto;">
-  <figcaption><a class="self-link" href="#fig-Schaalprobleem_bij_georefereren"></bdi></a><span class="fig-title">Schaal en/of eenheden probleem bij georefereren</span></figcaption>
+  <figcaption><a class="self-link" href="#fig-Schaalprobleem_bij_georefereren"></bdi></a><span class="fig-title">Schaal- en/of eenhedenprobleem bij georefereren</span></figcaption>
 </figure>
 
 <aside class="note" title="Gebruik van LoGeoRef en schaal"> <p><strong>AANBEVELING:</strong> Gebruik de schaalparameter binnen georeferentie uitsluitend voor geometrische transformaties binnen het coördinatensysteem (bijvoorbeeld CRS-transformaties), en niet voor eenheidsconversies. Definieer eenheden altijd expliciet via de daarvoor bestemde attributen, zoals <a href="https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcUnitAssignment.htm">IfcUnitAssignment</a>.</p> </aside>
+
+<aside class="note" title="Gebruik van LoGeoRef en schaal"> <p><strong>AANBEVELING:</strong> Gebruik drie schaal-parameters binnen georeferentie uitsluitend voor geometrische transformaties binnen het coördinatensysteem (bijvoorbeeld CRS-transformaties). Hiervoor gebruikt men bijvoorbeeld <a class="self-link" href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4_3/HTML/lexical/IfcMapConversionScaled.htm">IfcMapConversionScaled</a>, waarmee men met de aparte schaalattributen, Factor X, Y en Z, kan definieren. Dit maakt een meer gedetailleerder combinatie met data mogelijk die een verschillende schaal voor x,y en hoogte kunnen hebben zoals RDNAP. </p> </aside>
