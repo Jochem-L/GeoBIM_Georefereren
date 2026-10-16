@@ -33,17 +33,19 @@ Dezelfde uitbreidbaarheid brengt georeferentie [Level 60](#level-60) binnen bere
 Wanneer men in 2D vectorsoftware werkt die geen .ifc bestand kan exporteren zijn er ook mogelijkheden voor georeferentie. De objecten in de DXF worden bij voorkeur getekend in een coördinatenruimte die matcht met een geprojecteerd CRS (zoals EPSG:28992 of EPSG:3857). De coördinaten zijn dan in meters, zoals in het coordinatenstelsel. Voorbeeld: een lijn van punt(110000, 450000) naar punt (110500, 450500) is dan correct gepositioneerd in RD-coördinaten.
 
 <aside class="note" title="Teken wanneer mogelijk op RD in 2D-Vectorsoftware">
-  <p><strong>AANBEVELING:</strong> Teken wanneer mogelijk in RD coordinaten in 2D vectorsoftware (CAD)</p>
+  <p><strong>AANBEVELING:</strong> Teken wanneer mogelijk in RD coordinaten in 2D vectorsoftware (CAD) en wissel de georeferentiegegevens uit in de GEODATA entiteit van DXF</p>
 </aside>
 
-Dit is niet in alle software mogelijk. Bij software die alleen werkt met lokale coordinaten is het lastig om op coordinaat 110000 - 450000 te werken, omdat dit heel ver uit het centrale punt van deze software (punt 0,0) ligt. 
+Vanuit software kan het mogelijk zijn om te exporteren naar DXF. Een DXF- bestand heeft de mogelijkheid om georeferentie gegevens op te slaan in de [GEODATA](https://help.autodesk.com/view/OARX/2018/ENU/?guid=GUID-104FE0E2-4801-4AC8-B92C-1DDF5AC7AB64) entiteit. Exports van bijvoorbeeld DWG naar DXF kunnnen daarbij de georeferentie behouden indien deze correct is ingesteld. 
 
-Een DXF-bestand zelf bevat geen informatie waarmee aangeduid wordt dat de waardes van de geometrie bedoeld zijn als RD-coördinaten. Het is mogelijk om de attributen voor georeferentie als extra bestand mee te geven naast de .dxf als een .WKT, .PROJ of .JSON file. 
+Dit is niet vanuit alle software mogelijk. Bij software die alleen werkt met lokale coordinaten is het lastig om op coordinaat 110000 - 450000 te werken, omdat dit heel ver uit het centrale punt van deze software (punt 0,0) ligt. In dat geval is het mogelijk om de attributen voor georeferentie als extra bestand mee te geven naast de .dxf als een .WKT, .PROJ of .JSON file. 
+
+ Het is mogelijk om de attributen voor georeferentie als extra bestand mee te geven naast de .dxf als een .WKT, .PROJ of .JSON file. 
 
 <aside class="note" title="Voorzie in een extra bestand voor Georeferentie">
   <p><strong>AANBEVELING:</strong> Voorzie in een extra bestand in <code>.PROJ</code> volgens 
     <a href="https://proj.org/en/stable/specifications/" rel="noopener noreferrer" target="_blank">PROJ</a> of een <code>.WKT</code> volgens
-    <a href="https://www.ogc.org/standards/wkt-crs/" rel="noopener noreferrer" target="_blank"> WKT-CRS</a> wanneer de georeferentie en het gebruikt crs niet in het bronbestand is gedefinieerd.</p>
+    <a href="https://www.ogc.org/standards/wkt-crs/" rel="noopener noreferrer" target="_blank"> WKT-CRS</a> wanneer de georeferentie en het gebruikt crs niet in het bronbestand en in uitwisselformaat DXF is gedefinieerd.</p>
 </aside>
 
 ## (City)GML 
