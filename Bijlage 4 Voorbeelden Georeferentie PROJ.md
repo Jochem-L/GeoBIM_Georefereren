@@ -12,6 +12,7 @@ Wanneer geen van de assen ook het Noorden is, dan kan men dit in PROJ definiëre
 
 ## Voorbeelden
 <aside class="example" title="Voorbeeld van een PROJ-string voor topocentrische coördinaten">
+
 ```proj
 +proj=topocentric +X_0=3871060.4331 +Y_0=385968.7003 +Z_0=5037479.6781
 ```
