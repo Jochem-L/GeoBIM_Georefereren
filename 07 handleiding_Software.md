@@ -5,7 +5,7 @@ In dit hoofdstuk wordt beschreven hoe de eerder toegelichte theoretische princip
 In software maakt men gebruik van een GEO Coördinatiepunt (met de synoniemen "surveypoint" en "referentiepunt lokaal nulpunt") en een BIM-nulpunt. Dit is in de praktijk een sterk paar. Men kan deze twee punten gebruiken om de transformatie als IfcMapConversion in software te zien. In het BIM-model staat het noordgerichte GEO Coördinatiepunt vrijwel altijd verdraaid t.o.v. het projectnorth - een project ligt zelden precies op het noorden. Het verschil tussen beide punten laat gebruikers eenvoudig wisselen tussen BIM- en RD-coordinaten. Men gebruikt voor deze punten fysieke objecten. In veel software is IfcMapConversion niet of nauwelijks visueel te controleren. Een fysiek, noordgericht object op het GEO Coördinatiepunt en een object op het BIM-nulpunt maken de georeferentie in elke viewer zichtbaar en controleerbaar. (BIM-nulpunt helpt om het bouwwerk orthogonaal aan de as te maken voor de belangrijkste assen.) 
 
 <figure id="Georeferentiepunt_en_BIM_Nulpunt" style="display: block; text-align: center; margin: 0 auto;">
-      <img src="./media/Handleiding/QGIS/QGIS_1.png" alt="Georeferentiepunt en BIM Nulpunt" style="width: 100%; max-width: 500px; height: auto; display: block; margin: 0 auto;"/>
+      <img src="./media/Handleiding/BIM_Nulpunt_en_Geo_coordinatiepunt_auteur_Jan_Brouwer.png" alt="Georeferentiepunt en BIM Nulpunt" style="width: 100%; max-width: 500px; height: auto; display: block; margin: 0 auto;"/>
     <figcaption><a class="self-link" href="#Georeferentiepunt_en_BIM_Nulpunt"></bdi></a><span class="fig-title">Georeferentiepunt en BIM Nulpunt Auteur: Jan Brouwer</span></figcaption>
 </figure>
 
