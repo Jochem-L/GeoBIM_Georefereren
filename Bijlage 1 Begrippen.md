@@ -82,17 +82,17 @@ Referentiepunt voor het uitwisselen en kunnen combineren/over elkaar heen leggen
 Het Project Base Point in Revit is de oorsprong van je projectcoördinaten, waarmee je afstanden en posities binnen het model bepaalt. Het verschilt van het Survey Point, dat juist een koppeling legt met de echte wereld. Samen zorgen deze punten voor een correcte uitlijning en coördinatie in Revit.<br>
 <br>
 **<dfn>GEO Coördinatiepunt</dfn>** <br>
-Referentiepunt voor het uitwisselen van Geodata. Het GEO Coördinatiepunt is een lokaal vastgesteld punt van een site, perceel of andere omgevingsdata. De RDNAP waarde (XYZ) van dit punt is vastgesteld. Geodata wordt op deze manier op de de juiste positie in in BIM gebracht waarbij de geodata <a>noordgericht</a> is en een translatie kent. Een voorbeeld is de IFC output van [perceel2ifc](https://bim-tools.github.io/perceel2ifc/) om IFC data van een perceel te verkrijgen. <br>
+Referentiepunt voor het uitwisselen van Geodata. Het GEO Coördinatiepunt is een lokaal vastgesteld punt van een site, perceel of andere omgevingsdata. De RDNAP-coördinaten van dit punt zijn vastgesteld (XYZ). Geodata wordt op deze manier op de de juiste positie in in BIM gebracht waarbij de geodata <a>noordgericht</a> is en een translatie kent. Een voorbeeld is de IFC output van [perceel2ifc](https://bim-tools.github.io/perceel2ifc/) om IFC data van een perceel te verkrijgen. <br>
 <br>
 **<dfn>Noordgericht</dfn>** <br>
 Dit betekend dat de data georiënteerd is in de richting van het geografisch noorden (<a>Grid North</a>). Het geeft aan dat de bovenkant naar het noorden wijst van de kaart. In het Engels vertaald: <a>Grid North</a>.De uitwisseling van modellen tussen GIS en BIM gebeurd is eenvoudiger met IFC en DXF modellen die <a>noordgericht</a> zijn.<br>
 <br>
 **<dfn>IFCMapconversion</dfn>** <br>
 <a>IFCMapconversion</a> is een onderdeel van de IFC-standaard (Industry Foundation Classes) dat wordt gebruikt om een lokaal coördinatensysteem van een BIM-model te koppelen aan een geografisch coördinatensysteem.<br> Het zorgt ervoor dat modellen correct worden uitgelijnd met kaarten of GIS-data. Het besschrijft de volgende coördinatentransformatie:<br> 
-Het kaartreferentiesysteem (CRS) Voor Nederland is dat EPSG:7415 met RD+NAP (XYZ, of EPSG:28992 voor alleen RD (XY).<br>
+Het kaartreferentiesysteem (CRS) Voor Nederland is dat EPSG:7415 met RD+NAP (xy+hoogte, of EPSG:28992 voor alleen RD (xy).<br>
 -Translatie: Het voegt verschuivingen toe in Eastings, Northings en OrthogonalHeight om het model geografisch correct te positioneren. <br>
 -Rotatie: Het model wordt anti-clockwise geroteerd rond de z-as om de assen uit te lijnen met het kaartreferentiesysteem. <br>
--Schaal: Er wordt één uniforme schaal toegepast op de x-, y- en z-as om eenheden te converteren. <br>
+-Schaal: Er wordt één uniforme schaal toegepast op de X-, Y- en Z-as om eenheden te converteren. <br>
  van millimeter naar meter is deze waarde 0.001. <br>
 -Meer informatie: [documentatie BuildingSmart](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMapConversion.htm)<br>
 <br>

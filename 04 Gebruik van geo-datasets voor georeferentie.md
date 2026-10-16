@@ -45,7 +45,7 @@ Naast vectoriële datasets zoals het DTB/1GiS en het NWB, kan ook het AHN, of ee
 
 ## Geodatasets voor het georefereren van BIM-modellen
 Voor georefereren zijn een aantal datasets en RD- en NAP-referentiepunten beschikbaar om op aan te sluiten. Deze zijn (niet limitatief) weergegeven in onderstaande [tabel](#tabel-overzicht-nationale-datasets) (<a href="https://cuatro.sim-cdn.nl/ahn/uploads/1_inventarisatie_van_puntenwolken_in_nederland_1.pdf?cb=mm0aYtMc"><em>WP1: Inventarisatie van puntenwolken in
-Nederland</em></a>). In de tabel is de volgende informatie weergegeven: de naam, eigenaar, nauwkeurigheid, dimensie en locatie. 
+Nederland</em></a>). In de tabel is de volgende informatie weergegeven: de naam, eigenaar, <mark>nauwkeurigheid</mark>, dimensie en locatie. Het georefereren van een BIM-model wordt nooit beter dan de nauwkeurigheid van de gebruikte dataset, waarbij de absolute precisie van een dataset vooral invloed heeft op de ligging van het BIM-model als geheel en de relatieve precisie van een dataset vooral invloed heeft op de consistentie met maten in het BIM-model. De het wel of niet onderscheid maken tussen absolutie en relatieve precisie en de manier waarop deze gespecificeerd worden, kan per dataset verschillen. Soms wordt de nauwkeurigheid vermeld waaraan een dataset zou moeten voldoen, in andere gevallen waar de dataset gemiddeld aan voldoet, of waar de dataset voor bijvoorbeeld 68% of 95% aan voldoet. Een optimistische waarde voor de nauwkeurigheid leidt tot onhaalbare verwachtingen en onbegrepen fouten bij het georefereren. 
 
 <table id="tabel-overzicht-nationale-datasets">
    <caption>Overzicht van nationale datasets en refrentiepunten beschikbaar voor georeferentie</caption>
@@ -101,16 +101,16 @@ Nederland</em></a>). In de tabel is de volgende informatie weergegeven: de naam,
       <td>Landelijk / stedelijk</td>
     </tr>
     <tr>
-      <td><a href="https://maps.rijkswaterstaat.nl/geoweb55/index.html?viewer=NAPinfo"><strong>RD-referentiepunten</strong></a></td>
+      <td><a href="https://www.nsgi.nl/referentiepunten-en-gnss-data/informatie-referentiepunten/rdinfo"><strong>RD-referentiepunten</strong></a></td>
       <td>&lt; 1 cm (horizontaal en verticaal)</td>
       <td>3D</td>
       <td>Landelijk netwerk (GNSS-kernnetpunten)</td>
     </tr>
     <tr>
-      <td><a href="https://www.nsgi.nl/referentiepunten-en-gnss-data/informatie-referentiepunten/rdinfo"><strong>RD-netwerk</strong></a></td>
+      <td><a href="https://maps.rijkswaterstaat.nl/geoweb55/index.html?viewer=NAPinfo"><strong>NAP-referentiepunten</strong></a></td>
       <td>&lt; 1 cm (verticaal)</td>
       <td>1D</td>
-      <td>Landelijk netwwerk (peilmerken)</td>
+      <td>Landelijk netwerk (peilmerken)</td>
     </tr>
     <tr>
       <td><a href="https://www.pdok.nl/introductie/-/article/basisregistratie-adressen-en-gebouwen-ba-1"><strong>BAG</strong></a></td>

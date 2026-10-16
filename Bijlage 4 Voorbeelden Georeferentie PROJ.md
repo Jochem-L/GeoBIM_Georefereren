@@ -2,33 +2,34 @@
 # PROJ
 
 Coordinate operation:
-Wanneer men werkt in een engineering CRS in een cartesiaans assenstelsel waarbij een as (y-as) ook het Noorden is. Dan kan men werken met een proj met een topocentric x,y,z (Vanaf het middelpunt van de aarde) of lat lon.
+Wanneer men werkt in een engineering CRS in een cartesisch assenstelsel waarbij een as (y-as) ook het Noorden is, dan kan men dit met een PROJ definiëren als topocentrische coördinaten (x,y,z).
 
-Stap 1: Kies een RD of een Lat Lon coordinaat waar dit op moet landen
-Stap 2: Reken deze om naar Geocentrisch met een X,Y,Z
-Stap 3: Maak een proj aan of wkt met met deze waarden.
+* Stap 1: Kies een RD- of een breedte- en lengte-coördinaat waar dit op moet landen
+* Stap 2: Reken deze om naar geocentrische (X,Y,Z) coördinaten (vanaf het middelpunt van de aarde) 
+* Stap 3: Maak een PROJ-string, -pipeline aan of WKT-string met met deze waarden.
 
-Zo niet, dan krijg je een Concattenated operation: 
+Wanneer geen van de assen ook het Noorden is, dan kan men dit in PROJ definiëren met een 2D Helmerttransformatie.
 
-## PROJ-String
-<aside class="example" title="Voorbeeld van een proj-string van topocentrische projectie">
+## Voorbeelden
+<aside class="example" title="Voorbeeld van een PROJ-string voor topocentrische coördinaten">
+
 ```proj
 +proj=topocentric +X_0=3871060.4331 +Y_0=385968.7003 +Z_0=5037479.6781
 ```
 </aside>
 
 
-<aside class="example" title="Voorbeeld van een proj-string van helmert conversie ">
+<aside class="example" title="Voorbeeld van een PROJ-pipeline voor een Helmerttransformatie naar RD">
 
 ```proj
--ct "proj=helmert convention = coordinate_frame x=175507.112 y=502108.807 s=2.91569 theta=-216.5814"
+-ct "proj=helmert convention=coordinate_frame x=175507.112 y=502108.807 s=2.91569 theta=-216.5814"
 ```
 </aside>
 
-<aside class="example" title="Voorbeeld van een inverse proj-string van helmert conversie ">
+<aside class="example" title="Voorbeeld van PROJ-pipeline voor een inverse Helmerttransformatie vanaf RD">
 
 ```proj
--ct "inv proj=helmert convention = coordinate_frame x=175507.112 y=502108.807 s=2.91569 theta=-216.5814"
+-ct "inv proj=helmert convention=coordinate_frame x=175507.112 y=502108.807 s=2.91569 theta=-216.5814"
 ```
 </aside>
 
@@ -188,7 +189,7 @@ Het voorbeeld hieronder toont een definitie van een EngineeredCRS met tranformat
       ]
     },
     "transformation": {
-    "name": "Lokale BIM affine transformatie",
+    "name": "Lokale BIM affiene transformatie",
 
     "method": {
       "name": "Affine transformation"
