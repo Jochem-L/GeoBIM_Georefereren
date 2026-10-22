@@ -9,12 +9,12 @@ Ter verbetering van de nauwkeurigheid biedt IfcGref de mogelijkheid om ingemeten
 
 Afhankelijk van het initiële georeferentieniveau van het IFC-bestand kan IfcGref het model upgraden tot LoGeoRef50. Twee ingemeten punten volstaan om bestanden die oorspronkelijk geen geo-informatie bevatten (LoGeoRef0–10) te georefereren, terwijl slechts één aanvullend ingemeten punt nodig is voor modellen die reeds gedeeltelijke georeferentie-metagegevens bevatten (LoGeoRef20–40). Voor de omzetting tussen verschillende geografische en geprojecteerde coördinatenstelsels maakt IfcGref gebruik van de pyproj-bibliotheek, wat het proces robuust maakt voor uiteenlopende regio’s en CRS-definities.
 
-![IfcProjectedCRS attributen en waarden](media/ifcProjCRS.png "IfcProjectedCRS attributen en waarde")
+![IfcProjectedCRS attributen en waarden](media/Tooling/ifcProjCRS.png "IfcProjectedCRS attributen en waarde")
 
-![IfcMapConversion attributen en waarden](media/IfcMapconversion_attributen.png "IfcMapConversion attributen en waarde")
+![IfcMapConversion attributen en waarden](media/Tooling/IfcMapconversion_attributen.png "IfcMapConversion attributen en waarde")
 
 Aan het einde van het IfcGref georeferentie-proces wordt het IFC-bestand bijgewerkt met georeferentieattributen, waarna de gebruiker het bewerkte IFC-bestand kan downloaden en direct kan visualiseren op een kaart via de webinterface van IfcGref. Hierdoor kunnen gebruikers de ruimtelijke uitlijning onmiddellijk controleren.
-![IfcGref visualization](media/ifcGref00.jpg "IfcGref visualization")
+![IfcGref visualization](media/Tooling/ifcGref00.jpg "IfcGref visualization")
 
 
 ## Ifc georeferencer 

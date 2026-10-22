@@ -454,10 +454,10 @@ Start hiervoor een nieuw Ifc Project, het liefst in meters:
 
 Druk op het "+" teken naast IfcMapConversion en vul de juiste gegevens in.
 
-<div id="tabel-Blender-ifcmapconversion" style="display: flex; flex-wrap: nowrap; gap: 1em; justify-content: center;">
-  <img src="./media/Handleiding/Blender/Blender_05.png" alt="IfcMapConversion_in_Blender" style="width: 400px; height: auto; display: block;">
-  <img src="./media/Handleiding/Blender/Blender_06.png" alt="IfcMapConversion_leeg_in_Blender" style="width: 400px; height: auto; display: block;">
-  <img src="./media/Handleiding/Blender/Blender_07.png" alt="IfcMapConversion_gevuld_in_Blender" style="width: 400px; height: auto; display: block;">
+<div id="tabel-Blender-ifcmapconversion" style="display: flex; no-wrap: wrap; gap: 1em; justify-content: center; align-items: flex-start;">
+  <img src="./media/Handleiding/Blender/blender_05.png" alt="IfcMapConversion_in_Blender" style="width: 100%; max-width: 400px; height: auto; display: block;">
+  <img src="./media/Handleiding/Blender/Blender_06.png" alt="IfcMapConversion_leeg_in_Blender" style="width: 100%; max-width: 400px; height: auto; display: block;">
+  <img src="./media/Handleiding/Blender/Blender_07.png" alt="IfcMapConversion_gevuld_in_Blender" style="width: 100%; max-width: 400px; height: auto; display: block;">
 </div>
 
 Sla het model op als ifc en gebruik tooling zoals ifcgref of andere toepassingen om de georeferentie te controleren. 
