@@ -45,81 +45,84 @@ Naast vectoriële datasets zoals het DTB/1GiS en het NWB, kan ook het AHN, of ee
 
 ## Geodatasets voor het georefereren van BIM-modellen
 Voor georefereren zijn een aantal datasets en RD- en NAP-referentiepunten beschikbaar om op aan te sluiten. Deze zijn (niet limitatief) weergegeven in onderstaande [tabel](#tabel-overzicht-nationale-datasets) (<a href="https://cuatro.sim-cdn.nl/ahn/uploads/1_inventarisatie_van_puntenwolken_in_nederland_1.pdf?cb=mm0aYtMc"><em>WP1: Inventarisatie van puntenwolken in
-Nederland</em></a>). In de tabel is de volgende informatie weergegeven: de naam, eigenaar, <mark>nauwkeurigheid</mark>, dimensie en locatie. Het georefereren van een BIM-model wordt nooit beter dan de nauwkeurigheid van de gebruikte dataset, waarbij de absolute precisie van een dataset vooral invloed heeft op de ligging van het BIM-model als geheel en de relatieve precisie van een dataset vooral invloed heeft op de consistentie met maten in het BIM-model. De het wel of niet onderscheid maken tussen absolutie en relatieve precisie en de manier waarop deze gespecificeerd worden, kan per dataset verschillen. Soms wordt de nauwkeurigheid vermeld waaraan een dataset zou moeten voldoen, in andere gevallen waar de dataset gemiddeld aan voldoet, of waar de dataset voor bijvoorbeeld 68% of 95% aan voldoet. Een optimistische waarde voor de nauwkeurigheid leidt tot onhaalbare verwachtingen en onbegrepen fouten bij het georefereren. 
+Nederland</em></a>). In de tabel is de volgende informatie weergegeven: de naam, eigenaar, nauwkeurigheid, dimensie en locatie. Het georefereren van een BIM-model, met gebruik van geodata, wordt nooit beter dan de nauwkeurigheid van de gebruikte geodataset, waarbij de absolute precisie van een dataset vooral invloed heeft op de ligging van het BIM-model als geheel en de relatieve precisie van een dataset vooral invloed heeft op de consistentie met maten in het BIM-model. Het wel of niet onderscheid maken tussen absolutie en relatieve precisie en de manier waarop deze gespecificeerd worden, kan per dataset verschillen. Soms wordt de nauwkeurigheid vermeld waaraan een dataset zou moeten voldoen, in andere gevallen waar de dataset gemiddeld aan voldoet, of waar de dataset voor bijvoorbeeld 68% of 95% aan voldoet. Een optimistische waarde voor de nauwkeurigheid leidt tot onhaalbare verwachtingen en onbegrepen fouten bij het georefereren. 
 
 <table id="tabel-overzicht-nationale-datasets">
    <caption>Overzicht van nationale datasets en refrentiepunten beschikbaar voor georeferentie</caption>
   <thead>
     <tr>
       <th>Naam</th>
-      <th>Nauwkeurigheid</th>
       <th>Dimensie</th>
       <th>Domein</th>
+      <th>Gespecificeerde nauwkeurigheid*</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><a href="https://www.pdok.nl/introductie/-/article/digitaal-topografisch-bestand-dtb-"><strong>DTB / 1GiS</strong></a></td>
-      <td>cm-nauwkeurig op objectniveau</td>
+      <td><a href="https://www.pdok.nl/introductie/-/article/digitaal-topografisch-bestand-dtb-"><strong>1GiS</strong></a></td>
       <td>2.5D</td>
       <td>Landelijkbeheerde water/wegen-infrastructuur</td>
+      <td><mark>Na te gaan (bron: <a href="https://standaarden.rws.nl"> Standaarden RWS - Standaard 6058) </mark></td>
     </tr>
     <tr>
       <td><a href="https://www.pdok.nl/introductie/-/article/basisregistratie-grootschalige-topografie-bgt-"><strong>BGT</strong></a></td>
-      <td>cm-nauwkeurig op objectniveau</td>
       <td>2D</td>
       <td>Landelijk</td>
+      <td>30 tot 60 cm positionele nauwkeurigheid <br> (bron: <a href="https://docs.geostandaarden.nl/imgeo/catalogus/bgt/#positionele-nauwkeurigheid">nauwkeurigheidsbeschrijving catalogus BGT</a>)</td>
     </tr>
     <tr>
       <td><a href="https://www.ahn.nl/dataroom"><strong>AHN</strong></a></td>
-      <td>10–15 cm (verticaal) &amp; 13–18 cm</td>
       <td>3D</td>
       <td>Landelijk</td>
-    </tr>
-    <tr>
-      <td><strong>PMG</strong></td>
-      <td>± 2 cm (relatief)</td>
-      <td>3D</td>
-      <td>RWS-wegennet, selectieve locaties</td>
+      <td> hoogtenauwkeurigheid AHN 2,3,4 (95,4% = 15 cm). Het bestand bezit een zodanige dichtheid, een zodanige verdeling en een zodanige planimetrische nauwkeurigheid dat topografische objecten met een grootte van twee meter x twee meter eenduidig en met een positieafwijking van maximaal 50 centimeter kunnen worden geïdentificeerd(bron: <a href="https://www.ahn.nl/kwaliteitsbeschrijving"> kwaliteitsbeschrijving AHN)</a></td>
     </tr>
     <tr>
       <td><a href="https://www.nationaalwegenbestand.nl/nwb-downloaden"><strong>NWB</strong></a></td>
-      <td>± 1 m (topologisch)</td>
       <td>2D</td>
       <td>Landelijk, wegennet</td>
+      <td> De doelstelling is een maximale afwijking van 10 centimeter ten opzichte van het midden van de weg. Weggeometrie wordt vereenvoudigd met een tolerantie van 5 centimeter (bron: <a href="https://docs.ndw.nu/en/handleidingen/nwb/kwaliteit/kwaliteitsmetingen/"> kwaliteitsmeting NWB</a> en <a href="https://docs.ndw.nu/handleidingen/nwb/kwaliteit/"> kwaliteit NWB)</a></td>
     </tr>
     <tr>
       <td><a href="https://spoorinbeeld.nl/"><strong>SpoorInBeeld - Helicopter vluchten</strong></a></td>
-      <td>± 12 cm (xyH)</td>
       <td>3D</td>
       <td>Spoortracés</td>
+      <td>onbekend bij opstellers praktijkrichtlijn</td>
     </tr>
     <tr>
       <td><a href="https://www.beeldmateriaal.nl/dataroom"><strong>Beeldmateriaal</strong></a></td>
-      <td>± 5–10 cm (projectie)</td>
       <td>2.5D</td>
       <td>Landelijk / stedelijk</td>
+      <td>onbekend bij opstellers praktijkrichtlijn</td>
     </tr>
     <tr>
-      <td><a href="https://www.nsgi.nl/referentiepunten-en-gnss-data/informatie-referentiepunten/rdinfo"><strong>RD-referentiepunten</strong></a></td>
-      <td>&lt; 1 cm (horizontaal en verticaal)</td>
+      <td><a href="https://www.nsgi.nl/referentiepunten-en-gnss-data/informatie-referentiepunten/rdinfo"><strong>RD-referentiepunten</strong></a></td>      
       <td>3D</td>
       <td>Landelijk netwerk (GNSS-kernnetpunten)</td>
+      <td><mark>(bron: <a href="https://www.nsgi.nl/referentiepunten-en-gnss-data/informatie-referentiepunten/rdinfo"> kwaliteitsbeschrijving RD-referentiepunten</a>)</mark></td>
     </tr>
     <tr>
-      <td><a href="https://maps.rijkswaterstaat.nl/geoweb55/index.html?viewer=NAPinfo"><strong>NAP-referentiepunten</strong></a></td>
-      <td>&lt; 1 cm (verticaal)</td>
+      <td><a href="https://maps.rijkswaterstaat.nl/geoweb55/index.html?viewer=NAPinfo"><strong>NAP-Peilmerken</strong></a></td>
       <td>1D</td>
       <td>Landelijk netwerk (peilmerken)</td>
+      <td><mark>(bron: <a href="https://www.nsgi.nl/referentiepunten-en-gnss-data/informatie-referentiepunten/rdinfo"> NAP Peilmerken</a>)</mark></td>
     </tr>
     <tr>
       <td><a href="https://www.pdok.nl/introductie/-/article/basisregistratie-adressen-en-gebouwen-ba-1"><strong>BAG</strong></a></td>
-      <td>± 10 cm (objectpositie)</td>
       <td>2D/2.5D</td>
       <td>Landelijk</td>
+      <td>De ingemeten geometrie van een Pand heeft een positionele nauwkeurigheid van 20 cm × √2. Afgerond is dit 30 cm. bron: <a href="https://www.geobasisregistraties.nl/documenten/2018/03/12/catalogus-2018"> BAG catalogus 2018</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://www.pdok.nl/introductie/-/article/basisregistratie-adressen-en-gebouwen-ba-1"><strong>3D Basisvoorziening</strong></a></td>
+      <td>3D</td>
+      <td>Landelijk</td>
+      <td>(bron:<a href="https://3d.kadaster.nl/productbeschrijving/"> 3D Basisvoorziening productbeschrijving) </a></td>
     </tr>
   </tbody>
 </table>
+
+ <mark>* In deze specificaties worden nauwkeurigheid eisen gesteld die minimaal gehaald dienen te worden om te voldoen aan de eisen voor dit product. Bij de interpretatie van deze nauwkeurigheden dient rekening te worden gehouden met het feit dat sommige specificaties verschillende standaardafwijkingen hebben. Hierbij is het ook weer van belang om te kijken welke product er gebruikt kan worden om het doel van het BIM-model te halen.</mark>
+
 
 Naast primaire geodatasets, kunnen gemeentes, provicies en centrale overheden andere datasets beschikbaar hebben, die een kleiner gebied beslaan. Ook zijn er datasets die zijn afgeleid uit de bovenbenoemde datasets. Een voorbeeld is de 3DBAG, waar de BAG en het <a>AHN</a> de basis zijn voor het maken van deze dataset. Het <a>DTB</a> is opgebouwd met verschillende meettechnieken en verschillende standaarden. Vanuit het onderzoek van Rijkswaterstaat, TU Delft, Het Waterschapshuis en EuroSDR is er een analyse uitgevoerd voor alle LiDAR-datasets in Europa. De resultaten hiervan zijn in te zien in de portal die in dit onderzoek is ontwikkeld: <a href="https://3d.bk.tudelft.nl/eupc/"> <strong>European Pointclouds (EUPC)</strong></a>
 

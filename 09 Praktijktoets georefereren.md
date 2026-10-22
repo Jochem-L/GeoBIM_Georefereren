@@ -139,60 +139,60 @@ De IFC modellen zijn ingelezen in QGIS, waarbij er gerbuik is gemaakt van de [if
   <tr>
     <td>ifcbridge-model01_georeferenced.ifc </td>
     <td>
-<img src="./media/ifcbrigde_model01_qgis.png" alt="Resultaat geogerefereerd model level 20" title="Resultaat geogerefereerd model level 20" width="190">
+<img src="./media/Praktijktoets/ifcbrigde_model01_qgis.png" alt="Resultaat geogerefereerd model level 20" title="Resultaat geogerefereerd model level 20" width="190">
     </td>
    <td> EPSG:8395 </td><td> ✅ </td><td> ✅ </td><td> ✅ </td> <td> ✅ </td><td>-</td>
   </tr>
   <tr>
     <td>ifcbridge-model02_georeferenced.ifc </td>
-    <td><img src="./media/ifcbrigde_model02_qgis.png" alt="Resultaat geogerefereerd model level 20" title="Resultaat geogerefereerd model level 20" width="190"></td>
+    <td><img src="./media/Praktijktoets/ifcbrigde_model02_qgis.png" alt="Resultaat geogerefereerd model level 20" title="Resultaat geogerefereerd model level 20" width="190"></td>
 <td> EPSG:31468 </td></td><td> ✅ </td><td> 🔶 </td><td> 🔶 </td> <td> 🔶</td><td>Er zijn correcties toegepast voor de schaal (0,001) en de hoogte (-10 m). Voor deze praktijktoets zijn geen geo-referentiegegevens beschikbaar ter verificatie.</td>
   </tr>
   <tr>
     <td>ifcbridge-model03_georeferenced.ifc </td>
     <td>
-<img src="./media/ifcbrigde_model03_qgis.png" alt="Resultaat geogerefereerd model level 20" title="Resultaat geogerefereerd model level 20" width="190">
+<img src="./media/Praktijktoets/ifcbrigde_model03_qgis.png" alt="Resultaat geogerefereerd model level 20" title="Resultaat geogerefereerd model level 20" width="190">
     </td>
        <td> EPSG:27700 </td><td> ✅ </td><td> 🔶 </td><td> 🔶 </td> <td> 🔶</td><td>De schaalcorrectie bedraagt 0,001 en de oriëntatie is -1,0. Voor deze praktijktoets zijn geen geo-referentiegegevens beschikbaar ter verificatie. Tevens is geen MapUnit gedefinieerd in het model.</td>
   </tr>
   <tr>
     <td>Kievitsweg_R25_ILS Spaces 20250815_LoGeoRef_Totaal.ifc</td>
     <td>
-<img src="./media/ref_tot_3D.png" alt="Resultaat geogerefereerd model level 20" title="Resultaat geogerefereerd model level 20" width="190">
+<img src="./media/Praktijktoets/ref_tot_3D.png" alt="Resultaat geogerefereerd model level 20" title="Resultaat geogerefereerd model level 20" width="190">
     </td>
        <td> Real </td><td> ✅ </td><td> ✅  </td><td> ✅  </td> <td> ✅ </td><td> In de orientie is er een kleine verschuiving zichtbaar tov het AHN </td>
   </tr>
   <tr>
     <td>Kievitsweg_R25_ILS Spaces 20250815_LoGeoRef10.ifc</td>
-    <td> <img src="./media/ref_10_3D.png" alt="Resultaat geogerefereerd model level 20" title="Resultaat geogerefereerd model level 20" width="190">
+    <td> <img src="./media/Praktijktoets/ref_10_3D.png" alt="Resultaat geogerefereerd model level 20" title="Resultaat geogerefereerd model level 20" width="190">
     </td>
       <td>EPSG:28992 (Fake) </td><td> ❌ </td><td>✅ </td><td>✅ </td> <td> 🔶 </td><td>Het coördinatensysteem is correct gespecificeerd. Echter ontbreken correcte northing- en easting-waarden in de IFC. De schaal is niet expliciet gedefinieerd in het model, maar dit heeft geen consequenties vanwege de correcte hoogte-informatie</td>
   </tr>
   <tr>
     <td>Kievitsweg_R25_ILS Spaces 20250815_LoGeoRef20.ifc</td>
     <td>
-<img src="./media/ref_20_3D.png" alt="Resultaat geogerefereerd model level 20" title="Resultaat geogerefereerd model level 20" width="190">
+<img src="./media/Praktijktoets/ref_20_3D.png" alt="Resultaat geogerefereerd model level 20" title="Resultaat geogerefereerd model level 20" width="190">
     </td>
        <td> EPSG:28992 (Fake) </td><td>❌ </td><td> ✅ </td><td>✅ </td> <td>🔶 </td><td>Het coördinatensysteem is correct gespecificeerd. Echter ontbreken correcte northing- en easting-waarden in de IFC. De schaal is niet expliciet gedefinieerd in het model, maar dit heeft geen consequenties vanwege de correcte hoogte-informatie </td>
   </tr>
   <tr>
     <td>Kievitsweg_R25_ILS Spaces 20250815_LoGeoRef30.ifc</td>
     <td>
-<img src="./media/ref_30_3D.png" alt="Resultaat geogerefereerd model level 20" title="Resultaat geogerefereerd model level 20" width="190">
+<img src="./media/Praktijktoets/ref_30_3D.png" alt="Resultaat geogerefereerd model level 20" title="Resultaat geogerefereerd model level 20" width="190">
     </td>
        <td> EPSG:28992 (Fake) </td><td> ❌ </td><td> ✅ </td><td> ✅ </td> <td> 🔶 </td><td>Het coördinatensysteem is correct gespecificeerd. Echter ontbreken correcte northing- en easting-waarden in de IFC. De schaal is niet expliciet gedefinieerd in het model, maar dit heeft geen consequenties vanwege de correcte hoogte-informaties</td>
   </tr>
   <tr>
     <td>Kievitsweg_R25_ILS Spaces 20250815_LoGeoRef40.ifc</td>
     <td>
-<img src="./media/ref_40_2D.png" alt="Resultaat geogerefereerd model level 20" title="Resultaat geogerefereerd model level 20" width="190">
+<img src="./media/Praktijktoets/ref_40_2D.png" alt="Resultaat geogerefereerd model level 20" title="Resultaat geogerefereerd model level 20" width="190">
     </td>
        <td> EPSG:28992 (Fake) </td><td> ❌ </td><td> ✅ </td><td> ✅ </td> <td> ?</td><td>coordinaten systeem goed aangegeven, maar geen correct northing en easting in de ifc aanwezig;schaal niet aangegeven in het model, verder is dit model uit geklapt.. </td>
   </tr>
   <tr>
     <td>Kievitsweg_R25_ILS Spaces 20250815_LoGeoRef50.ifc</td>
     <td>
- <img src="./media/3D_50_AHN5.png" alt="Resultaat geogerefereerd model level 50" title="Resultaat geogerefereerd model level 50" width="190">
+ <img src="./media/Praktijktoets/3D_50_AHN5.png" alt="Resultaat geogerefereerd model level 50" title="Resultaat geogerefereerd model level 50" width="190">
     </td>
        <td> EPSG:28992 </td><td> ✅ </td><td> ✅ </td><td> ✅ </td> <td> ✅ </td><td>-</td>
   </tr>
@@ -205,7 +205,7 @@ De IFC modellen zijn ingelezen in QGIS, waarbij er gerbuik is gemaakt van de [if
 
 Figuur ter verduideling van de opmerking, geplaatst bij de brienenoord brug.
 <figure id="AHN4vsIFC" style="text-align: center; margin: 0 auto;">
-  <img src="./media/AHN4_verschuiving_brienenoord.png"
+  <img src="./media/Praktijktoets/AHN4_verschuiving_brienenoord.png"
        alt="AHN4vsIFC"
        style="width: 200px; height: auto; display: block; margin: 0 auto;" />
   <figcaption style="font-size: 0.9em;">
